@@ -5,18 +5,13 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-    <uses-permission android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
-        tools:ignore="ProtectedPermissions"
-        xmlns:tools="http://schemas.android.com/tools"/>
 
     <application
         android:allowBackup="true"
         android:label="CarParts AutoReply"
-        android:icon="@drawable/ic_launcher"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="false">
 
-        <!-- Main screen -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -26,10 +21,8 @@
             </intent-filter>
         </activity>
 
-        <!-- Settings screen -->
         <activity android:name=".SettingsActivity" android:exported="false"/>
 
-        <!-- THE CORE: Notification Listener Service -->
         <service
             android:name=".NotificationService"
             android:label="CarParts AutoReply"
