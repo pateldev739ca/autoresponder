@@ -7,7 +7,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
         with:
-          java-version: '21'
+          java-version: '17'
           distribution: 'temurin'
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
@@ -15,12 +15,11 @@ jobs:
         run: |
           wget -q https://services.gradle.org/distributions/gradle-8.4-bin.zip
           unzip -q gradle-8.4-bin.zip
-          export PATH=$PATH:$(pwd)/gradle-8.4/bin
           echo "$(pwd)/gradle-8.4/bin" >> $GITHUB_PATH
       - name: Build APK
         run: |
           cd autoresponder_clean
-          gradle assembleDebug
+          gradle assembleDebug --warning-mode all
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
