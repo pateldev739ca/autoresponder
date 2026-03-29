@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0d0f14">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="← Back"
+                android:backgroundTint="#1e2330"
+                android:textColor="#f5a623"
+                android:layout_marginEnd="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚙️ Settings"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- API Key Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AI API KEY"
+            android:textColor="#f5a623"
+            android:textSize="11sp"
+            android:letterSpacing="0.15"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/etApiKey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Paste your OpenAI API key here (sk-...)"
+            android:textColorHint="#6b7280"
+            android:textColor="#ffffff"
+            android:backgroundTint="#2a3040"
+            android:inputType="textPassword"
+            android:padding="14dp"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Get a free API key at: platform.openai.com → API Keys"
+            android:textColor="#6b7280"
+            android:textSize="12sp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Business Info -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BUSINESS NAME"
+            android:textColor="#f5a623"
+            android:textSize="11sp"
+            android:letterSpacing="0.15"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/etBusinessName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g. Dev's Auto Parts"
+            android:textColorHint="#6b7280"
+            android:textColor="#ffffff"
+            android:backgroundTint="#2a3040"
+            android:padding="14dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="YOUR CITY / LOCATION"
+            android:textColor="#f5a623"
+            android:textSize="11sp"
+            android:letterSpacing="0.15"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/etCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g. Brisbane, QLD"
+            android:textColorHint="#6b7280"
+            android:textColor="#ffffff"
+            android:backgroundTint="#2a3040"
+            android:padding="14dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EXTRA NOTES FOR AI (optional)"
+            android:textColor="#f5a623"
+            android:textSize="11sp"
+            android:letterSpacing="0.15"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/etNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g. All parts tested. Open Mon-Sat 8am-5pm."
+            android:textColorHint="#6b7280"
+            android:textColor="#ffffff"
+            android:backgroundTint="#2a3040"
+            android:padding="14dp"
+            android:minLines="3"
+            android:gravity="top"
+            android:layout_marginBottom="24dp"/>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SAVE SETTINGS"
+            android:backgroundTint="#f5a623"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:padding="16dp"/>
+
+    </LinearLayout>
+</ScrollView>

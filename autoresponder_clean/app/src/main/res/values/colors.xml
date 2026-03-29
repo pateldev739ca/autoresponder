@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="active">#22c55e</color>
+    <color name="warning">#f5a623</color>
+    <color name="paused">#6b7280</color>
+    <color name="bg">#0d0f14</color>
+    <color name="accent">#f5a623</color>
+</resources>
