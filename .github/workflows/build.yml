@@ -10,16 +10,15 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
+        run: |
+          echo "y" | sdkmanager "platforms;android-34" "build-tools;34.0.0"
       - name: Install Gradle
         run: |
           wget -q https://services.gradle.org/distributions/gradle-8.4-bin.zip
           unzip -q gradle-8.4-bin.zip
           echo "$(pwd)/gradle-8.4/bin" >> $GITHUB_PATH
       - name: Build APK
-        run: |
-          cd autoresponder_clean
-          gradle assembleDebug --warning-mode all
+        run: cd autoresponder_clean && gradle assembleDebug --stacktrace
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
